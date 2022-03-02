@@ -204,7 +204,8 @@ public class PlayerController : MonoBehaviour
         transform.localScale = Scaler;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    // OnCollisionStay instead of Trigger so that the oven trap will kill when swapping tags
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
