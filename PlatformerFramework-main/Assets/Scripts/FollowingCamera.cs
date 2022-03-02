@@ -55,7 +55,8 @@ public class FollowingCamera : MonoBehaviour
 
 
 
-        transform.position = Vector3.Lerp(transform.position, newPos, snapSpeed);
+        // transform.position = Vector3.Lerp(transform.position, newPos, snapSpeed); // Follow target x and y
+        transform.position = Vector3.Lerp(transform.position, new Vector3(newPos.x, transform.position.y, transform.position.z), snapSpeed); // follow target x
     }
 
     public void TriggerShake(float time, float magnitude)
