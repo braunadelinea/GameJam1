@@ -52,6 +52,10 @@ public class PlayerController : MonoBehaviour
     private float moveInputV;
     public float climbSpeed;
 
+    //jetpack things
+    private bool jetpackOn = false;
+    [SerializeField] private float jetPackForce = 0.5f;
+
     //Respawn info
     [HideInInspector]
     public Vector3 RespawnPoint = new Vector3();
@@ -82,9 +86,9 @@ public class PlayerController : MonoBehaviour
             jumps = extraJumps;
         }
         //check if jump can be triggered
-        if (Input.GetAxisRaw("Jump") == 1 && jumpPressed == false && isGrounded == true && isClimbing == false)
+        if (Input.GetAxisRaw("Jump") == 1 && jumpPressed == false && isGrounded == true && isClimbing == false && jetpackOn == false)
         {
-            myAud.PlayOneShot(jumpNoise);
+            //myAud.PlayOneShot(jumpNoise);
             myRb.drag = airDrag;
             if ((myRb.velocity.x < 0 && moveInputH > 0) || (myRb.velocity.x > 0 && moveInputH < 0))
             {
@@ -96,9 +100,9 @@ public class PlayerController : MonoBehaviour
             }
             jumpPressed = true;
         }
-        else if (Input.GetAxisRaw("Jump") == 1 && jumpPressed == false && jumps > 0 && isClimbing == false)
+        else if (Input.GetAxisRaw("Jump") == 1 && jumpPressed == false && jumps > 0 && isClimbing == false && jetpackOn == false)
         {
-            myAud.PlayOneShot(jumpNoise);
+            //myAud.PlayOneShot(jumpNoise);
             myRb.drag = airDrag;
             if ((myRb.velocity.x < 0 && moveInputH > 0) || (myRb.velocity.x > 0 && moveInputH < 0))
             {
@@ -122,6 +126,24 @@ public class PlayerController : MonoBehaviour
             myRb.drag = airDrag;
             myRb.velocity = (Vector2.up * jumpForce) + new Vector2(myRb.velocity.x, 0);
             jumpPressed = true;
+        }
+
+        // jetpack things
+        if (Input.GetKey("right shift"))
+        {
+            jetpackOn = true;
+            //myRb.velocity = (Vector2.up * jetPackForce * Time.deltaTime * 1000) + new Vector2(myRb.velocity.x, 0);
+            if (myRb.velocity.y < 7)
+            {
+                myRb.velocity += (Vector2.up * jetPackForce * Time.deltaTime * 150);
+                //Debug.Log(myRb.velocity);
+            } 
+
+            //Debug.Log(Time.deltaTime);
+        }
+        else
+        {
+            jetpackOn = false;
         }
     }
 
@@ -163,7 +185,7 @@ public class PlayerController : MonoBehaviour
             myRb.gravityScale = gravityScale;
             isClimbing = false;
         }
-        
+
         //horizontal movement
         moveInputH = Input.GetAxisRaw("Horizontal");
         //animator settings
@@ -193,6 +215,12 @@ public class PlayerController : MonoBehaviour
         {
             Flip();
         }
+
+        // jetpack stuff
+        //if (jetpackOn)
+        //{
+         //   myRb.velocity = (Vector2.up * jetPackForce);
+        //}
 
     }
     //flip the player so sprite faces the other way
