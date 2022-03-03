@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OvenTrap : MonoBehaviour
+public class OnOffTrap : MonoBehaviour
 {
     [SerializeField] private int swapInterval = 3; // Seconds
     private int lastUpdate; // Only update once per second
