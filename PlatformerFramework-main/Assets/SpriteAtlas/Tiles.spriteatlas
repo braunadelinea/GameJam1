@@ -44,7 +44,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 015970736cfa36e4c88054972bb3d2ba, type: 3}
-    totalSpriteSurfaceArea: 26256
+    totalSpriteSurfaceArea: 148756
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -156,6 +156,10 @@ SpriteAtlas:
   - {fileID: -7336076203705889676, guid: f99a3879764308a4d92d87d841829522, type: 3}
   - {fileID: -4344611882063969491, guid: f99a3879764308a4d92d87d841829522, type: 3}
   - {fileID: -5241486731584646207, guid: f99a3879764308a4d92d87d841829522, type: 3}
+  - {fileID: -5991478944198967540, guid: 874b806a135fbcb47b1afc18bdbb9638, type: 3}
+  - {fileID: 7867082840616842004, guid: 874b806a135fbcb47b1afc18bdbb9638, type: 3}
+  - {fileID: -216314368219678128, guid: 874b806a135fbcb47b1afc18bdbb9638, type: 3}
+  - {fileID: 4910187949212275823, guid: 874b806a135fbcb47b1afc18bdbb9638, type: 3}
   - {fileID: 1671283345461455480, guid: 950f927dbc9d7d146bfeab77e560f475, type: 3}
   - {fileID: -3638366375080524030, guid: 950f927dbc9d7d146bfeab77e560f475, type: 3}
   - {fileID: 3774374558072554424, guid: 950f927dbc9d7d146bfeab77e560f475, type: 3}
@@ -373,6 +377,10 @@ SpriteAtlas:
   - cavesofgallet_tiles_72
   - cavesofgallet_tiles_8
   - cavesofgallet_tiles_9
+  - torti roll big_3
+  - torti roll big_2
+  - torti roll big_1
+  - torti roll big_0
   - rotating_coin_0
   - rotating_coin_1
   - rotating_coin_2
