@@ -55,7 +55,10 @@ public class PlayerController : MonoBehaviour
     //jetpack things
     private bool jetpackOn = false;
     [SerializeField] private float jetPackForce = 0.5f;
-
+    [SerializeField] private float jetpackMaxFuel = 15.0f;
+    [SerializeField] private float jetpackFuelLossRate = 0.025f;
+    private float jetpackFuel = 0.0f;
+    
     //Respawn info
     [HideInInspector]
     public Vector3 RespawnPoint = new Vector3();
@@ -74,6 +77,8 @@ public class PlayerController : MonoBehaviour
         jumps = extraJumps;
 
         RespawnPoint = transform.position;
+
+        jetpackFuel = jetpackMaxFuel;
     }
 
     //Update is called once per frame
@@ -129,21 +134,24 @@ public class PlayerController : MonoBehaviour
         }
 
         // jetpack things
-        if (Input.GetKey("right shift"))
+        if (Input.GetAxisRaw("Jetpack") == 1 && jetpackFuel > 0)
         {
             jetpackOn = true;
-            //myRb.velocity = (Vector2.up * jetPackForce * Time.deltaTime * 1000) + new Vector2(myRb.velocity.x, 0);
+            
             if (myRb.velocity.y < 7)
             {
                 myRb.velocity += (Vector2.up * jetPackForce * Time.deltaTime * 150);
-                //Debug.Log(myRb.velocity);
-            } 
+            }
 
-            //Debug.Log(Time.deltaTime);
+            jetpackFuel -= jetpackFuelLossRate;
         }
         else
         {
             jetpackOn = false;
+            if (jetpackFuel < jetpackMaxFuel)
+            {
+                jetpackFuel += jetpackFuelLossRate;
+            }
         }
     }
 
