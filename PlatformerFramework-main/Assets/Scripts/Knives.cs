@@ -6,14 +6,18 @@ using UnityEngine;
 public class Knives : MonoBehaviour
 {
     private Rigidbody2D knife;
+
     private float downwardsSpeed = 10.0f;
     private float upwardsSpeed = 5.0f;
     private bool movingDown = true;
+
     public float timeOnGround = 0.5f;
     private bool onGround = false;
     private float currentTime = 0.0f;
-    
     [SerializeField] String startDirection = "down";
+
+    AudioSource audioSource;
+    public AudioClip knifeHitTorti;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +36,8 @@ public class Knives : MonoBehaviour
         }
         if (transform.position.y < -2.52 && movingDown)
         {
+            audioSource.PlayOneShot(knifeHitTorti, 0.7F);
+
             // wait for 2 seconds
             onGround = true;
 
