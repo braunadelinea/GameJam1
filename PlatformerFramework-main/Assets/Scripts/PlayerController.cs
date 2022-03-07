@@ -137,11 +137,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxisRaw("Jetpack") == 1 && jetpackFuel > 0)
         {
             jetpackOn = true;
-            
-            if (myRb.velocity.y < 7)
-            {
-                myRb.velocity += (Vector2.up * jetPackForce * Time.deltaTime * 150);
-            }
 
             jetpackFuel -= jetpackFuelLossRate;
         }
@@ -225,10 +220,15 @@ public class PlayerController : MonoBehaviour
         }
 
         // jetpack stuff
-        //if (jetpackOn)
-        //{
-         //   myRb.velocity = (Vector2.up * jetPackForce);
-        //}
+        myAnim.SetBool("Flying", jetpackOn);
+        
+        if (jetpackOn)
+        {
+            if (myRb.velocity.y < 7)
+            {
+                myRb.velocity += (Vector2.up * jetPackForce * Time.deltaTime * 150);
+            }
+        }
 
     }
     //flip the player so sprite faces the other way
