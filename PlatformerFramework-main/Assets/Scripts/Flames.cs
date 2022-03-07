@@ -7,6 +7,7 @@ public class Flames : MonoBehaviour
     private Animator myAnim;
     private float timeInvicible = 2.0f;
     private bool movingBack = false;
+    private int state = 0;
 
     // Start is called before the first frame update
     void Start()
