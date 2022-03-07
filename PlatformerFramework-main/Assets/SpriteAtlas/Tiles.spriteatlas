@@ -44,12 +44,18 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 015970736cfa36e4c88054972bb3d2ba, type: 3}
-    totalSpriteSurfaceArea: 501068
+    totalSpriteSurfaceArea: 1183148
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 5390291880678140523, guid: d1207ac18491a65468f8e093df0436e0, type: 3}
+  - {fileID: -4925957519692718827, guid: d1207ac18491a65468f8e093df0436e0, type: 3}
+  - {fileID: 4680785175772899533, guid: d1207ac18491a65468f8e093df0436e0, type: 3}
+  - {fileID: 359903942358555483, guid: d1207ac18491a65468f8e093df0436e0, type: 3}
+  - {fileID: -1703564526985576056, guid: d1207ac18491a65468f8e093df0436e0, type: 3}
+  - {fileID: 1709271512524374621, guid: d1207ac18491a65468f8e093df0436e0, type: 3}
   - {fileID: 21300000, guid: 15d6c1531d0d90d4992b952a75c1cd9e, type: 3}
   - {fileID: 21300000, guid: e7afc606829b0de4f817d860fc8048c1, type: 3}
   - {fileID: 4413142109597815103, guid: 29173af6ad4f8f34cae2f2ad028ec303, type: 3}
@@ -279,6 +285,12 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 9448701fdbdfbdd4bb6d7a8e22c982cb, type: 3}
   - {fileID: 21300000, guid: 29d47e8f388bb094281a4b4fcc889212, type: 3}
   m_PackedSpriteNamesToIndex:
+  - sauce from pack_2
+  - sauce from pack_3
+  - sauce from pack_0
+  - sauce from pack_1
+  - sauce from pack_4
+  - sauce from pack_5
   - knife
   - cutting board-middle
   - FlyingSlimeAttack_8

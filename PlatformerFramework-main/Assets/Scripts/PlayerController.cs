@@ -65,6 +65,7 @@ public class PlayerController : MonoBehaviour
 
     //animation
     private Animator myAnim;
+    [SerializeField] private Animator sauceAnim;
     
 
     // Start is called before the first frame update
@@ -221,6 +222,7 @@ public class PlayerController : MonoBehaviour
 
         // jetpack stuff
         myAnim.SetBool("Flying", jetpackOn);
+        sauceAnim.SetBool("Saucing", jetpackOn);
         
         if (jetpackOn)
         {
