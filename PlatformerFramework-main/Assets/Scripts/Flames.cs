@@ -5,7 +5,6 @@ using UnityEngine;
 public class Flames : MonoBehaviour
 {
     private Animator myAnim;
-    private float timeInvicible = 2.0f;
     private bool movingBack = false;
     private int state = 0;
 
@@ -24,7 +23,7 @@ public class Flames : MonoBehaviour
 
     IEnumerator ChangeStates()
     {
-        // invicible -> low
+        // invisible -> low
         if (state == 0)
         {
             yield return new WaitForSeconds(1);
@@ -33,7 +32,7 @@ public class Flames : MonoBehaviour
         }
         else if (state == 1)
         {
-            // low -> invicible
+            // low -> invisible
             if (movingBack)
             {
                 yield return new WaitForSeconds(1);
