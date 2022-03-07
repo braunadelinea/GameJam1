@@ -44,7 +44,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 015970736cfa36e4c88054972bb3d2ba, type: 3}
-    totalSpriteSurfaceArea: 464318
+    totalSpriteSurfaceArea: 501068
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -67,6 +67,7 @@ SpriteAtlas:
   - {fileID: 4055577607036525942, guid: 9e5bac4777e59db4c80a998172c53472, type: 3}
   - {fileID: 21300000, guid: c4f3a3888a922a3438560075fde09da9, type: 3}
   - {fileID: 21300000, guid: 7e1ef6e8479410b4dbc51c1c7764602c, type: 3}
+  - {fileID: -7642887886827170484, guid: aad8d4790832997448356573e5834a15, type: 3}
   - {fileID: 7562716900497062, guid: f99a3879764308a4d92d87d841829522, type: 3}
   - {fileID: -7154765599751142846, guid: f99a3879764308a4d92d87d841829522, type: 3}
   - {fileID: 2984065513281883999, guid: f99a3879764308a4d92d87d841829522, type: 3}
@@ -295,6 +296,7 @@ SpriteAtlas:
   - FlyingSlimeIdle_2
   - sink
   - full stove
+  - torti jetpack_0
   - cavesofgallet_tiles_0
   - cavesofgallet_tiles_1
   - cavesofgallet_tiles_2
