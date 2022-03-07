@@ -6,7 +6,7 @@ public class Flames : MonoBehaviour
 {
     private Animator myAnim;
     private bool movingBack = false;
-    private int state = 0;
+    private string state = "invisible";
 
     // Start is called before the first frame update
     void Start()
@@ -24,49 +24,52 @@ public class Flames : MonoBehaviour
     IEnumerator ChangeStates()
     {
         // invisible -> low
-        if (state == 0)
+        if (state == "invisible")
         {
             yield return new WaitForSeconds(1);
-            state = 1;
+            state = "low";
             movingBack = false;
         }
-        else if (state == 1)
+        else if (state == "low")
         {
             // low -> invisible
             if (movingBack)
             {
                 yield return new WaitForSeconds(1);
-                state = 0;
+                state = "invisible";
             }
             // low -> mid
             if (!movingBack)
             {
                 yield return new WaitForSeconds(1);
-                state = 2;
+                state = "mid";
             }
         }
-        else if (state == 2)
+        else if (state == "mid")
         {
             // mid -> low
             if (movingBack)
             {
                 yield return new WaitForSeconds(1);
-                state = 1;
+                state = "low";
             }
             // mid -> high
             if (!movingBack)
             {
                 yield return new WaitForSeconds(1);
-                state = 3;
+                state = "high";
             }
         }
         // high -> mid
-        else if (state == 3)
+        else if (state == "high")
         {
             yield return new WaitForSeconds(1);
-            state = 2;
+            state = "mid";
             movingBack = true;
         }
+
+
+
         StartCoroutine(ChangeStates());
     }
 }
