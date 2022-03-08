@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: aad8d4790832997448356573e5834a15
+guid: e63dcdf3c4569d74daf05ab11219683e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7642887886827170484
-    second: torti jetpack_0
+      213: 8248361016977204851
+    second: torti new rolling_0
+  - first:
+      213: 8631158487034973356
+    second: torti new rolling_1
+  - first:
+      213: -7880608216462414713
+    second: torti new rolling_2
+  - first:
+      213: 368575192191343478
+    second: torti new rolling_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: torti jetpack_0
+      name: torti new rolling_0
       rect:
         serializedVersion: 2
         x: 14
-        y: 21
+        y: 91
         width: 175
-        height: 210
+        height: 175
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,8 +129,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c45d78fe5f10fe590800000000000000
-      internalID: -7642887886827170484
+      spriteID: 3762b1ca4a0187270800000000000000
+      internalID: 8248361016977204851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torti new rolling_1
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 91
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac41d30ae808c770800000000000000
+      internalID: 8631158487034973356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torti new rolling_2
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 91
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78cabb3949472a290800000000000000
+      internalID: -7880608216462414713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torti new rolling_3
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 91
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b169b3f217d1500800000000000000
+      internalID: 368575192191343478
       vertices: []
       indices: 
       edges: []
