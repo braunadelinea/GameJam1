@@ -66,13 +66,15 @@ public class PlayerController : MonoBehaviour
     //animation
     private Animator myAnim;
     [SerializeField] private Animator sauceAnim;
-    
+
+    AudioSource audioSource;
+    public AudioClip tortiCollision;
 
     // Start is called before the first frame update
     void Start()
     {
         myRb = GetComponent<Rigidbody2D>();
-        myAud = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
         myAnim = GetComponent<Animator>();
 
         jumps = extraJumps;
@@ -247,6 +249,7 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
+            audioSource.PlayOneShot(tortiCollision, 0.7F);
             myRb.velocity = Vector2.zero;
             transform.position = RespawnPoint;
         }
