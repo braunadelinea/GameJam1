@@ -17,12 +17,13 @@ public class Knives : MonoBehaviour
     [SerializeField] String startDirection = "down";
 
     AudioSource audioSource;
-    public AudioClip knifeHitTorti;
+    public AudioClip knifeHitBoard;
 
     // Start is called before the first frame update
     void Start()
     {
         movingDown = startDirection == "down" ? true : false;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,7 +37,7 @@ public class Knives : MonoBehaviour
         }
         if (transform.position.y < -2.52 && movingDown)
         {
-            audioSource.PlayOneShot(knifeHitTorti, 0.7F);
+            audioSource.PlayOneShot(knifeHitBoard, 0.7F);
 
             // wait for 2 seconds
             onGround = true;
