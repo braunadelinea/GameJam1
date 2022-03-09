@@ -60,7 +60,8 @@ public class PlayerController : MonoBehaviour
     private float jetpackFuel = 0.0f;
 
     // jetpack cooldown bar things
-    //Sprivate float currentValue = jetPackMaxFuel;
+    public GameObject jetpackFuelBar;
+    public GameObject jetpackMaxFuelBar;
 
     //Respawn info
     [HideInInspector]
@@ -86,10 +87,7 @@ public class PlayerController : MonoBehaviour
 
         jetpackFuel = jetpackMaxFuel;
 
-        //blackBar = GetComponent<GameObject>();
-        //whiteBar = GetComponent<GameObject>();
-
-       // whiteBar.Transform.scale = blackBar.Transform.scale;
+        UpdateFuelBar();
     }
 
     //Update is called once per frame
@@ -149,20 +147,25 @@ public class PlayerController : MonoBehaviour
         {
             jetpackOn = true;
 
-            jetpackFuel -= jetpackFuelLossRate;
+            jetpackFuel -= Time.deltaTime * jetpackFuelLossRate;
         }
         else
         {
             jetpackOn = false;
             if (jetpackFuel < jetpackMaxFuel)
             {
-                jetpackFuel += jetpackFuelLossRate;
+                jetpackFuel += Time.deltaTime * jetpackFuelLossRate;
             }
         }
 
-        // jetpack cooldown bar
-        //whiteBar.Transform.scale.x = currentValue / jetpackMaxFuel * whiteBar.Transform.scale.x;
+        UpdateFuelBar();
+    }
 
+    void UpdateFuelBar() {
+        // jetpack cooldown bar
+        Vector3 blackScale = jetpackFuelBar.gameObject.transform.localScale;
+        blackScale.x = (jetpackFuel / jetpackMaxFuel) * jetpackMaxFuelBar.gameObject.transform.localScale.x;
+        jetpackFuelBar.gameObject.transform.localScale = blackScale;
     }
 
     // FixedUpdate is called once per physics frame
