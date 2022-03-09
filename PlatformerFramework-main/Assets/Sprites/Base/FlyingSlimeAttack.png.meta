@@ -1,19 +1,34 @@
 fileFormatVersion: 2
-guid: 9e5bac4777e59db4c80a998172c53472
+guid: 29173af6ad4f8f34cae2f2ad028ec303
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3347984106645726015
-    second: FlyingSlimeIdle_0
+      213: -670163557928789229
+    second: FlyingSlimeAttack_0
   - first:
-      213: 9145588197540752857
-    second: FlyingSlimeIdle_1
+      213: 2355461983139839047
+    second: FlyingSlimeAttack_1
   - first:
-      213: 4055577607036525942
-    second: FlyingSlimeIdle_2
+      213: -1986914867161763858
+    second: FlyingSlimeAttack_2
   - first:
-      213: -6386380331874166012
-    second: FlyingSlimeIdle_3
+      213: 1349612669943369637
+    second: FlyingSlimeAttack_3
+  - first:
+      213: -8650551627668834149
+    second: FlyingSlimeAttack_4
+  - first:
+      213: -9190097803777937610
+    second: FlyingSlimeAttack_5
+  - first:
+      213: 4227826887867029099
+    second: FlyingSlimeAttack_6
+  - first:
+      213: -3674992999376901249
+    second: FlyingSlimeAttack_7
+  - first:
+      213: 4413142109597815103
+    second: FlyingSlimeAttack_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -35,6 +50,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -44,8 +60,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -66,9 +82,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -111,7 +130,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FlyingSlimeIdle_0
+      name: FlyingSlimeAttack_0
       rect:
         serializedVersion: 2
         x: 0
@@ -125,14 +144,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cc5ab181329981d0800000000000000
-      internalID: -3347984106645726015
+      spriteID: 31b1e347bc913b6f0800000000000000
+      internalID: -670163557928789229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FlyingSlimeIdle_1
+      name: FlyingSlimeAttack_1
       rect:
         serializedVersion: 2
         x: 32
@@ -146,14 +165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ddeb60a208abee70800000000000000
-      internalID: 9145588197540752857
+      spriteID: 74cbcf2a13840b020800000000000000
+      internalID: 2355461983139839047
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FlyingSlimeIdle_2
+      name: FlyingSlimeAttack_2
       rect:
         serializedVersion: 2
         x: 64
@@ -167,14 +186,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67dd072a85e484830800000000000000
-      internalID: 4055577607036525942
+      spriteID: eef61e7947f0d64e0800000000000000
+      internalID: -1986914867161763858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FlyingSlimeIdle_3
+      name: FlyingSlimeAttack_3
       rect:
         serializedVersion: 2
         x: 96
@@ -188,8 +207,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40b5916bce40f57a0800000000000000
-      internalID: -6386380331874166012
+      spriteID: 5af4750a299cab210800000000000000
+      internalID: 1349612669943369637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingSlimeAttack_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b983f91902113f780800000000000000
+      internalID: -8650551627668834149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingSlimeAttack_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63fe7ba1db6367080800000000000000
+      internalID: -9190097803777937610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingSlimeAttack_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b66d82f87224caa30800000000000000
+      internalID: 4227826887867029099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingSlimeAttack_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ba718865dcffcc0800000000000000
+      internalID: -3674992999376901249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyingSlimeAttack_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3155e9ed51ae3d30800000000000000
+      internalID: 4413142109597815103
       vertices: []
       indices: 
       edges: []

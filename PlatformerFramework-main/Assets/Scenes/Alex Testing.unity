@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 1142780358}
   - component: {fileID: 1142780360}
   - component: {fileID: 1142780361}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 9d06ccc9480b49c47b694ca8d40de21a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -262,7 +262,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1231104269}
   - component: {fileID: 1231104270}
-  m_Layer: 0
+  - component: {fileID: 1231104271}
+  m_Layer: 8
   m_Name: counter top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,6 +335,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1231104271
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231104268}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.65496826}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.2, y: 1.8}
+    newSize: {x: 3.2, y: 1.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.2, y: 0.49006343}
+  m_EdgeRadius: 0
 --- !u!1 &1327393166
 GameObject:
   m_ObjectHideFlags: 0

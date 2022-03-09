@@ -88,6 +88,8 @@ public class PlayerController : MonoBehaviour
         jetpackFuel = jetpackMaxFuel;
 
         UpdateFuelBar();
+        
+        sauceAnim.SetInteger("SauceColor", 1);
     }
 
     //Update is called once per frame
@@ -240,7 +242,7 @@ public class PlayerController : MonoBehaviour
         // jetpack stuff
         myAnim.SetBool("Flying", jetpackOn);
         sauceAnim.SetBool("Saucing", jetpackOn);
-        
+
         if (jetpackOn)
         {
             if (myRb.velocity.y < 7)

@@ -44,7 +44,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 015970736cfa36e4c88054972bb3d2ba, type: 3}
-    totalSpriteSurfaceArea: 7284674
+    totalSpriteSurfaceArea: 7966738
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -56,6 +56,12 @@ SpriteAtlas:
   - {fileID: 359903942358555483, guid: d1207ac18491a65468f8e093df0436e0, type: 3}
   - {fileID: -1703564526985576056, guid: d1207ac18491a65468f8e093df0436e0, type: 3}
   - {fileID: 1709271512524374621, guid: d1207ac18491a65468f8e093df0436e0, type: 3}
+  - {fileID: -6595784911279224174, guid: 5bfc8d12d603b3942a14f2eb65a29ef0, type: 3}
+  - {fileID: 6390039201822218816, guid: 5bfc8d12d603b3942a14f2eb65a29ef0, type: 3}
+  - {fileID: 4711243821717548371, guid: 5bfc8d12d603b3942a14f2eb65a29ef0, type: 3}
+  - {fileID: 5537444077607010168, guid: 5bfc8d12d603b3942a14f2eb65a29ef0, type: 3}
+  - {fileID: 7325621281844560002, guid: 5bfc8d12d603b3942a14f2eb65a29ef0, type: 3}
+  - {fileID: 6260473062936834179, guid: 5bfc8d12d603b3942a14f2eb65a29ef0, type: 3}
   - {fileID: 21300000, guid: 498b42a23544ffc4781dfd61d585bbee, type: 3}
   - {fileID: 21300000, guid: 15d6c1531d0d90d4992b952a75c1cd9e, type: 3}
   - {fileID: 368575192191343478, guid: e63dcdf3c4569d74daf05ab11219683e, type: 3}
@@ -293,7 +299,6 @@ SpriteAtlas:
   - {fileID: -2209401061123471698, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
   - {fileID: 1018328791618719094, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
   - {fileID: 6731733094262721628, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
-  - {fileID: 21300000, guid: 9448701fdbdfbdd4bb6d7a8e22c982cb, type: 3}
   - {fileID: 21300000, guid: 29d47e8f388bb094281a4b4fcc889212, type: 3}
   m_PackedSpriteNamesToIndex:
   - sauce from pack_2
@@ -302,6 +307,12 @@ SpriteAtlas:
   - sauce from pack_1
   - sauce from pack_4
   - sauce from pack_5
+  - pesto jetpack_5
+  - pesto jetpack_4
+  - pesto jetpack_1
+  - pesto jetpack_0
+  - pesto jetpack_3
+  - pesto jetpack_2
   - sink 3
   - knife
   - torti new rolling_3
@@ -539,7 +550,6 @@ SpriteAtlas:
   - tileset_96
   - tileset_95
   - tileset_94
-  - Square
   - Tall flame
   m_RenderDataMap: {}
   m_Tag: Tiles
