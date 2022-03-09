@@ -58,7 +58,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jetpackMaxFuel = 15.0f;
     [SerializeField] private float jetpackFuelLossRate = 0.025f;
     private float jetpackFuel = 0.0f;
-    
+
+    // jetpack cooldown bar things
+    public GameObject jetpackFuelBar;
+    public GameObject jetpackMaxFuelBar;
+
     //Respawn info
     [HideInInspector]
     public Vector3 RespawnPoint = new Vector3();
@@ -82,6 +86,8 @@ public class PlayerController : MonoBehaviour
         RespawnPoint = transform.position;
 
         jetpackFuel = jetpackMaxFuel;
+
+        UpdateFuelBar();
     }
 
     //Update is called once per frame
@@ -141,16 +147,25 @@ public class PlayerController : MonoBehaviour
         {
             jetpackOn = true;
 
-            jetpackFuel -= jetpackFuelLossRate;
+            jetpackFuel -= Time.deltaTime * jetpackFuelLossRate;
         }
         else
         {
             jetpackOn = false;
             if (jetpackFuel < jetpackMaxFuel)
             {
-                jetpackFuel += jetpackFuelLossRate;
+                jetpackFuel += Time.deltaTime * jetpackFuelLossRate;
             }
         }
+
+        UpdateFuelBar();
+    }
+
+    void UpdateFuelBar() {
+        // jetpack cooldown bar
+        Vector3 blackScale = jetpackFuelBar.gameObject.transform.localScale;
+        blackScale.x = (jetpackFuel / jetpackMaxFuel) * jetpackMaxFuelBar.gameObject.transform.localScale.x;
+        jetpackFuelBar.gameObject.transform.localScale = blackScale;
     }
 
     // FixedUpdate is called once per physics frame
