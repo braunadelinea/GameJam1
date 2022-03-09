@@ -40,6 +40,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2182338453
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Knife
+    uniqueID: 3755419503
     locked: 0
