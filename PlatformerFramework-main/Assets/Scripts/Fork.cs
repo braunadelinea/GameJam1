@@ -54,6 +54,7 @@ public class Fork : MonoBehaviour
                 if (transform.position.y <= 0.6)
                 {
                     stabbed = false;
+                    // hits table
                 }
             }
         }
