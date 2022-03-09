@@ -42,9 +42,6 @@ public class PlayerController : MonoBehaviour
     public float groundDrag = 5;
     public float airDrag = 1;
 
-    private AudioSource myAud;
-    public AudioClip jumpNoise;
-
     //ladder things
     private bool isClimbing;
     public LayerMask whatIsLadder;
@@ -72,14 +69,21 @@ public class PlayerController : MonoBehaviour
     private Animator myAnim;
     [SerializeField] private Animator sauceAnim;
 
-    AudioSource audioSource;
+    public AudioSource myAud;
     public AudioClip tortiCollision;
+    public AudioClip jumpNoise;
+    public AudioClip tortiStabbed;
 
+    public AudioSource jetpackAudioSource;
+    public AudioClip jetpackNoise;
+
+    // Fork
+    [SerializeField] private Fork fork;
+    
     // Start is called before the first frame update
     void Start()
     {
         myRb = GetComponent<Rigidbody2D>();
-        audioSource = GetComponent<AudioSource>();
         myAnim = GetComponent<Animator>();
 
         jumps = extraJumps;
@@ -106,7 +110,7 @@ public class PlayerController : MonoBehaviour
         //check if jump can be triggered
         if (Input.GetAxisRaw("Jump") == 1 && jumpPressed == false && isGrounded == true && isClimbing == false && jetpackOn == false)
         {
-            //myAud.PlayOneShot(jumpNoise);
+            myAud.PlayOneShot(jumpNoise);
             myRb.drag = airDrag;
             if ((myRb.velocity.x < 0 && moveInputH > 0) || (myRb.velocity.x > 0 && moveInputH < 0))
             {
@@ -120,7 +124,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (Input.GetAxisRaw("Jump") == 1 && jumpPressed == false && jumps > 0 && isClimbing == false && jetpackOn == false)
         {
-            //myAud.PlayOneShot(jumpNoise);
+            myAud.PlayOneShot(jumpNoise);
             myRb.drag = airDrag;
             if ((myRb.velocity.x < 0 && moveInputH > 0) || (myRb.velocity.x > 0 && moveInputH < 0))
             {
@@ -150,7 +154,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxisRaw("Jetpack") == 1 && jetpackFuel > 0 && canUseJetpack)
         {
             jetpackOn = true;
-
+            jetpackAudioSource.PlayOneShot(jetpackNoise);
             jetpackFuel -= Time.deltaTime * jetpackFuelLossRate;
         }
         else
@@ -274,9 +278,17 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            audioSource.PlayOneShot(tortiCollision, 0.7F);
+            myAud.PlayOneShot(tortiCollision);
             myRb.velocity = Vector2.zero;
             transform.position = RespawnPoint;
+            
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Fork"))
+            {
+                print("Stabbed Torti :(");
+                fork.setTortiStabbed();
+                // torti is hit
+                myAud.PlayOneShot(tortiStabbed);
+            }
         }
     }
 }

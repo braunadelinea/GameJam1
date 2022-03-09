@@ -44,7 +44,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 015970736cfa36e4c88054972bb3d2ba, type: 3}
-    totalSpriteSurfaceArea: 7966738
+    totalSpriteSurfaceArea: 14871826
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -56,6 +56,7 @@ SpriteAtlas:
   - {fileID: 359903942358555483, guid: d1207ac18491a65468f8e093df0436e0, type: 3}
   - {fileID: -1703564526985576056, guid: d1207ac18491a65468f8e093df0436e0, type: 3}
   - {fileID: 1709271512524374621, guid: d1207ac18491a65468f8e093df0436e0, type: 3}
+  - {fileID: 21300000, guid: b3c54d12f54ddba4db193b30d560e3aa, type: 3}
   - {fileID: -6595784911279224174, guid: 5bfc8d12d603b3942a14f2eb65a29ef0, type: 3}
   - {fileID: 6390039201822218816, guid: 5bfc8d12d603b3942a14f2eb65a29ef0, type: 3}
   - {fileID: 4711243821717548371, guid: 5bfc8d12d603b3942a14f2eb65a29ef0, type: 3}
@@ -64,10 +65,12 @@ SpriteAtlas:
   - {fileID: 6260473062936834179, guid: 5bfc8d12d603b3942a14f2eb65a29ef0, type: 3}
   - {fileID: 21300000, guid: 498b42a23544ffc4781dfd61d585bbee, type: 3}
   - {fileID: 21300000, guid: 15d6c1531d0d90d4992b952a75c1cd9e, type: 3}
+  - {fileID: 21300000, guid: a0452af3263839b4891665b2eae8d972, type: 3}
   - {fileID: 368575192191343478, guid: e63dcdf3c4569d74daf05ab11219683e, type: 3}
   - {fileID: -7880608216462414713, guid: e63dcdf3c4569d74daf05ab11219683e, type: 3}
   - {fileID: 8631158487034973356, guid: e63dcdf3c4569d74daf05ab11219683e, type: 3}
   - {fileID: 8248361016977204851, guid: e63dcdf3c4569d74daf05ab11219683e, type: 3}
+  - {fileID: 21300000, guid: 4963b524e146bd94e886766d166f1f4f, type: 3}
   - {fileID: 4413142109597815103, guid: 29173af6ad4f8f34cae2f2ad028ec303, type: 3}
   - {fileID: -3674992999376901249, guid: 29173af6ad4f8f34cae2f2ad028ec303, type: 3}
   - {fileID: 4227826887867029099, guid: 29173af6ad4f8f34cae2f2ad028ec303, type: 3}
@@ -81,7 +84,6 @@ SpriteAtlas:
   - {fileID: -3347984106645726015, guid: 9e5bac4777e59db4c80a998172c53472, type: 3}
   - {fileID: -6386380331874166012, guid: 9e5bac4777e59db4c80a998172c53472, type: 3}
   - {fileID: 4055577607036525942, guid: 9e5bac4777e59db4c80a998172c53472, type: 3}
-  - {fileID: 21300000, guid: 7e1ef6e8479410b4dbc51c1c7764602c, type: 3}
   - {fileID: 7562716900497062, guid: f99a3879764308a4d92d87d841829522, type: 3}
   - {fileID: -7154765599751142846, guid: f99a3879764308a4d92d87d841829522, type: 3}
   - {fileID: 2984065513281883999, guid: f99a3879764308a4d92d87d841829522, type: 3}
@@ -189,7 +191,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: bd0d1fcb599b4f746b517b73ec75c3f0, type: 3}
   - {fileID: -6285371313021205481, guid: de4cbadccd47a244e8b4b6967bb4d88f, type: 3}
   - {fileID: -5846572879751760232, guid: de4cbadccd47a244e8b4b6967bb4d88f, type: 3}
-  - {fileID: 21300000, guid: 6dc82dfc4e22a674fa52f837b0341c5a, type: 3}
   - {fileID: 1671283345461455480, guid: 950f927dbc9d7d146bfeab77e560f475, type: 3}
   - {fileID: -3638366375080524030, guid: 950f927dbc9d7d146bfeab77e560f475, type: 3}
   - {fileID: 3774374558072554424, guid: 950f927dbc9d7d146bfeab77e560f475, type: 3}
@@ -299,7 +300,6 @@ SpriteAtlas:
   - {fileID: -2209401061123471698, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
   - {fileID: 1018328791618719094, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
   - {fileID: 6731733094262721628, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
-  - {fileID: 21300000, guid: 29d47e8f388bb094281a4b4fcc889212, type: 3}
   m_PackedSpriteNamesToIndex:
   - sauce from pack_2
   - sauce from pack_3
@@ -307,6 +307,7 @@ SpriteAtlas:
   - sauce from pack_1
   - sauce from pack_4
   - sauce from pack_5
+  - stove FINAL-1.png
   - pesto jetpack_5
   - pesto jetpack_4
   - pesto jetpack_1
@@ -315,10 +316,12 @@ SpriteAtlas:
   - pesto jetpack_2
   - sink 3
   - knife
+  - final close up reciept-1.png (1)
   - torti new rolling_3
   - torti new rolling_2
   - torti new rolling_1
   - torti new rolling_0
+  - final hand with fork-1.png-1.png
   - FlyingSlimeAttack_8
   - FlyingSlimeAttack_7
   - FlyingSlimeAttack_6
@@ -332,7 +335,6 @@ SpriteAtlas:
   - FlyingSlimeIdle_0
   - FlyingSlimeIdle_3
   - FlyingSlimeIdle_2
-  - full stove
   - cavesofgallet_tiles_0
   - cavesofgallet_tiles_1
   - cavesofgallet_tiles_2
@@ -440,7 +442,6 @@ SpriteAtlas:
   - just tile-1.png (1)
   - jetpack edited_1
   - jetpack edited_0
-  - pot
   - rotating_coin_0
   - rotating_coin_1
   - rotating_coin_2
@@ -550,7 +551,6 @@ SpriteAtlas:
   - tileset_96
   - tileset_95
   - tileset_94
-  - Tall flame
   m_RenderDataMap: {}
   m_Tag: Tiles
   m_IsVariant: 0
