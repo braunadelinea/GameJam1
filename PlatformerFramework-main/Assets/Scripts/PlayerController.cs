@@ -58,6 +58,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jetpackMaxFuel = 15.0f;
     [SerializeField] private float jetpackFuelLossRate = 0.025f;
     private float jetpackFuel = 0.0f;
+    private bool canUseJetpack = false;
 
     // jetpack cooldown bar things
     public GameObject jetpackFuelBar;
@@ -88,6 +89,8 @@ public class PlayerController : MonoBehaviour
         jetpackFuel = jetpackMaxFuel;
 
         UpdateFuelBar();
+        
+        sauceAnim.SetInteger("SauceColor", 1);
     }
 
     //Update is called once per frame
@@ -98,6 +101,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded == true)
         {
             jumps = extraJumps;
+            canUseJetpack = true;
         }
         //check if jump can be triggered
         if (Input.GetAxisRaw("Jump") == 1 && jumpPressed == false && isGrounded == true && isClimbing == false && jetpackOn == false)
@@ -143,7 +147,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // jetpack things
-        if (Input.GetAxisRaw("Jetpack") == 1 && jetpackFuel > 0)
+        if (Input.GetAxisRaw("Jetpack") == 1 && jetpackFuel > 0 && canUseJetpack)
         {
             jetpackOn = true;
 
@@ -152,12 +156,18 @@ public class PlayerController : MonoBehaviour
         else
         {
             jetpackOn = false;
+
+            if (jetpackFuel < 0.05)
+            {
+                canUseJetpack = false;
+            }
+            
             if (jetpackFuel < jetpackMaxFuel)
             {
                 jetpackFuel += Time.deltaTime * jetpackFuelLossRate;
             }
         }
-
+        
         UpdateFuelBar();
     }
 
@@ -240,7 +250,7 @@ public class PlayerController : MonoBehaviour
         // jetpack stuff
         myAnim.SetBool("Flying", jetpackOn);
         sauceAnim.SetBool("Saucing", jetpackOn);
-        
+
         if (jetpackOn)
         {
             if (myRb.velocity.y < 7)

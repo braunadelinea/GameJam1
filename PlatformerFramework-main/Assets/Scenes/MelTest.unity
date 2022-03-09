@@ -147,6 +147,11 @@ PrefabInstance:
       objectReference: {fileID: 2070157877}
     - target: {fileID: 8110227999438090080, guid: 5bb8d5d8999585341b7eb975ef896e7e,
         type: 3}
+      propertyPath: tortiCollision
+      value: 
+      objectReference: {fileID: 8300000, guid: 2b0f4165120d4fe47be3ab1f5e4b7ff6, type: 3}
+    - target: {fileID: 8110227999438090080, guid: 5bb8d5d8999585341b7eb975ef896e7e,
+        type: 3}
       propertyPath: jetpackMaxFuelBar
       value: 
       objectReference: {fileID: 1517811495}
