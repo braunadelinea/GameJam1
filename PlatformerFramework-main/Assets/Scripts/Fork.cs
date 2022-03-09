@@ -9,8 +9,10 @@ public class Fork : MonoBehaviour
     private double lastIncreaseTime = 0;
 
     [SerializeField] private int forkChopTime = 3;
-    [SerializeField] private float stabSpeed = 0.1f;
+    [SerializeField] private float stabSpeed = 0.25f;
+    [SerializeField] private float upSpeed = 0.1f;
     private bool stabbed = false;
+    private bool movingUp = false;
     
     [SerializeField] private Transform torti;
     private bool stabbedTorti = false;
@@ -40,7 +42,7 @@ public class Fork : MonoBehaviour
                 stabbed = true;
             
                 // TODO: Add stabbing here
-                transform.position = new Vector3(torti.position.x + 5, 10, 0);
+                transform.position = new Vector3(torti.position.x + 5, 15, 0);
             }
 
             if (!stabbed)
@@ -49,12 +51,24 @@ public class Fork : MonoBehaviour
             }
             else
             {
-                transform.position = new Vector3(transform.position.x, transform.position.y - stabSpeed, 0);
+                if (movingUp)
+                {
+                    transform.position = new Vector3(transform.position.x, transform.position.y + upSpeed, 0);
+                    if (transform.position.y > 15)
+                    {
+                        movingUp = false;
+                        stabbed = false;
+                    }
+                }
+                else
+                {
+                    transform.position = new Vector3(transform.position.x, transform.position.y - stabSpeed, 0);
+                }
+                
 
                 if (transform.position.y <= 0.6)
                 {
-                    stabbed = false;
-                    // hits table
+                    movingUp = true;
                 }
             }
         }
