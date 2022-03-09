@@ -20,16 +20,10 @@ public class FollowingCamera : MonoBehaviour
     public float shakeTime = 0;
     public float shakeMagnitude = 0;
 
-    private float furthestX = 0;
-    private double lastIncreaseTime = 0;
-
-    [SerializeField] private int forkChopTime = 4;
-    private bool stabbed = false;
-    
     // Start is called before the first frame update
     void Start()
     {
-        furthestX = target.transform.position.x;
+        
     }
 
     // Update is called once per frame
@@ -50,28 +44,6 @@ public class FollowingCamera : MonoBehaviour
     {
         Vector3 newPos = target.transform.position;
         newPos.z = transform.position.z;
-        
-        // Stabby Fork Start //
-        
-        // This sets up a timer to stab the player after they do not progress in the game for too long (forkChopTime)
-        double currentTime = Math.Floor(Time.fixedTime);
-        
-        if (target.transform.position.x > furthestX)
-        {
-            furthestX = target.transform.position.x;
-
-            lastIncreaseTime = currentTime;
-            stabbed = false;
-        }
-
-        if (currentTime - lastIncreaseTime > forkChopTime && !stabbed)
-        {
-            stabbed = true;
-            
-            // TODO: Add stabbing here
-        }
-        
-        // Stabby Fork End //
 
         if(shakeTime > 0)
         {
@@ -83,8 +55,6 @@ public class FollowingCamera : MonoBehaviour
             shakeTime = 0;
             shakeMagnitude = 0;
         }
-
-
 
         // transform.position = Vector3.Lerp(transform.position, newPos, snapSpeed); // Follow target x and y
         transform.position = Vector3.Lerp(transform.position, new Vector3(newPos.x, transform.position.y, transform.position.z), snapSpeed); // follow target x

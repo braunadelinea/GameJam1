@@ -74,7 +74,10 @@ public class PlayerController : MonoBehaviour
 
     AudioSource audioSource;
     public AudioClip tortiCollision;
-
+    
+    // Fork
+    [SerializeField] private Fork fork;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -277,6 +280,12 @@ public class PlayerController : MonoBehaviour
             audioSource.PlayOneShot(tortiCollision, 0.7F);
             myRb.velocity = Vector2.zero;
             transform.position = RespawnPoint;
+            
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Fork"))
+            {
+                print("Stabbed Torti :(");
+                fork.setTortiStabbed();
+            }
         }
     }
 }

@@ -44,7 +44,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 015970736cfa36e4c88054972bb3d2ba, type: 3}
-    totalSpriteSurfaceArea: 7966738
+    totalSpriteSurfaceArea: 12627730
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -64,10 +64,12 @@ SpriteAtlas:
   - {fileID: 6260473062936834179, guid: 5bfc8d12d603b3942a14f2eb65a29ef0, type: 3}
   - {fileID: 21300000, guid: 498b42a23544ffc4781dfd61d585bbee, type: 3}
   - {fileID: 21300000, guid: 15d6c1531d0d90d4992b952a75c1cd9e, type: 3}
+  - {fileID: 21300000, guid: a0452af3263839b4891665b2eae8d972, type: 3}
   - {fileID: 368575192191343478, guid: e63dcdf3c4569d74daf05ab11219683e, type: 3}
   - {fileID: -7880608216462414713, guid: e63dcdf3c4569d74daf05ab11219683e, type: 3}
   - {fileID: 8631158487034973356, guid: e63dcdf3c4569d74daf05ab11219683e, type: 3}
   - {fileID: 8248361016977204851, guid: e63dcdf3c4569d74daf05ab11219683e, type: 3}
+  - {fileID: 21300000, guid: 4963b524e146bd94e886766d166f1f4f, type: 3}
   - {fileID: 4413142109597815103, guid: 29173af6ad4f8f34cae2f2ad028ec303, type: 3}
   - {fileID: -3674992999376901249, guid: 29173af6ad4f8f34cae2f2ad028ec303, type: 3}
   - {fileID: 4227826887867029099, guid: 29173af6ad4f8f34cae2f2ad028ec303, type: 3}
@@ -299,7 +301,6 @@ SpriteAtlas:
   - {fileID: -2209401061123471698, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
   - {fileID: 1018328791618719094, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
   - {fileID: 6731733094262721628, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
-  - {fileID: 21300000, guid: 29d47e8f388bb094281a4b4fcc889212, type: 3}
   m_PackedSpriteNamesToIndex:
   - sauce from pack_2
   - sauce from pack_3
@@ -315,10 +316,12 @@ SpriteAtlas:
   - pesto jetpack_2
   - sink 3
   - knife
+  - final close up reciept-1.png (1)
   - torti new rolling_3
   - torti new rolling_2
   - torti new rolling_1
   - torti new rolling_0
+  - final hand with fork-1.png-1.png
   - FlyingSlimeAttack_8
   - FlyingSlimeAttack_7
   - FlyingSlimeAttack_6
@@ -550,7 +553,6 @@ SpriteAtlas:
   - tileset_96
   - tileset_95
   - tileset_94
-  - Tall flame
   m_RenderDataMap: {}
   m_Tag: Tiles
   m_IsVariant: 0
