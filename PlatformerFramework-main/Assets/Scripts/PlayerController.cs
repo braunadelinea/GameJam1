@@ -58,6 +58,7 @@ public class PlayerController : MonoBehaviour
 
     private float jetpackFuel = 0.0f;
     private bool canUseJetpack = false;
+    private bool jetpackEnabled = false;
 
     // jetpack cooldown bar things
     public GameObject jetpackFuelBar;
@@ -81,7 +82,7 @@ public class PlayerController : MonoBehaviour
 
     // Fork
     [SerializeField] private Fork fork;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -95,8 +96,6 @@ public class PlayerController : MonoBehaviour
         jetpackFuel = jetpackMaxFuel;
 
         UpdateFuelBar();
-        
-        sauceAnim.SetInteger("SauceColor", 0);
     }
 
     //Update is called once per frame
@@ -152,7 +151,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // jetpack things
-        if (Input.GetAxisRaw("Jetpack") == 1 && jetpackFuel > 0 && canUseJetpack)
+        if (Input.GetAxisRaw("Jetpack") == 1 && jetpackFuel > 0 && canUseJetpack && jetpackEnabled)
         {
             if (!jetpackOn)
             {
@@ -294,11 +293,27 @@ public class PlayerController : MonoBehaviour
             
             if (collision.gameObject.layer == LayerMask.NameToLayer("Fork"))
             {
-                print("Stabbed Torti :(");
                 fork.setTortiStabbed();
                 // torti is hit
                 myAud.PlayOneShot(tortiStabbed);
             }
+        }
+        else if (collision.gameObject.CompareTag("Jar"))
+        {
+            if (collision.gameObject.GetComponent<SauceJar>().getColor() == "red")
+            {
+                sauceAnim.SetInteger("SauceColor", 0);
+            }
+            else if (collision.gameObject.GetComponent<SauceJar>().getColor() == "green")
+            {
+                sauceAnim.SetInteger("SauceColor", 1);
+            }
+
+            
+            
+            jetpackEnabled = true;
+            
+            Destroy(collision.gameObject);
         }
     }
 }

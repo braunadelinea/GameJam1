@@ -17,6 +17,9 @@ public class Fork : MonoBehaviour
     [SerializeField] private Transform torti;
     private bool stabbedTorti = false;
     
+    // Shake
+    [SerializeField] private FollowingCamera camera;
+    
     void Start()
     {
         
@@ -65,8 +68,9 @@ public class Fork : MonoBehaviour
                 }
                 
 
-                if (transform.position.y <= 0.6)
+                if (transform.position.y <= 0.6 && !movingUp)
                 {
+                    camera.TriggerShake(0.25f, 0.5f);
                     movingUp = true;
                 }
             }
