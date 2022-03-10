@@ -80,6 +80,8 @@ public class PlayerController : MonoBehaviour
     public AudioSource jetpackAudioSource;
     public AudioClip jetpackNoise;
 
+    public bool deathSoundPlayed = true;
+
     // Fork
     [SerializeField] private Fork fork;
 
@@ -287,7 +289,11 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            myAud.PlayOneShot(tortiCollision);
+            if (!deathSoundPlayed)
+            {
+                myAud.PlayOneShot(tortiCollision);
+                deathSoundPlayed = false;
+            }
             myRb.velocity = Vector2.zero;
             transform.position = RespawnPoint;
             
