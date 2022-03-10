@@ -8,17 +8,46 @@ public class Flames : MonoBehaviour
     private bool movingBack = false;
     private string state = "invisible";
 
+    [SerializeField] private GameObject lowFlame;
+    [SerializeField] private GameObject mediumFlame;
+    [SerializeField] private GameObject highFlame;
+
     // Start is called before the first frame update
     void Start()
     {
         myAnim = GetComponent<Animator>();
         
+        StartCoroutine(ChangeStates());
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        // Do stuff
+        if (state == "invisible")
+        {
+            disableFlame(lowFlame);
+            disableFlame(mediumFlame);
+            disableFlame(highFlame);
+        }
+        else if (state == "low")
+        {
+            enableFlame(lowFlame);
+            disableFlame(mediumFlame);
+            disableFlame(highFlame);
+        }
+        else if (state == "mid")
+        {
+            disableFlame(lowFlame);
+            enableFlame(mediumFlame);
+            disableFlame(highFlame);
+        }
+        else if (state == "high")
+        {
+            disableFlame(lowFlame);
+            disableFlame(mediumFlame);
+            enableFlame(highFlame);
+        }
     }
 
     IEnumerator ChangeStates()
@@ -68,8 +97,18 @@ public class Flames : MonoBehaviour
             movingBack = true;
         }
 
-
-
         StartCoroutine(ChangeStates());
+    }
+
+    private void enableFlame(GameObject flame)
+    {
+        flame.GetComponent<BoxCollider2D>().enabled = true;
+        flame.GetComponent<SpriteRenderer>().enabled = true;
+    }
+
+    private void disableFlame(GameObject flame)
+    {
+        flame.GetComponent<BoxCollider2D>().enabled = false;
+        flame.GetComponent<SpriteRenderer>().enabled = false;
     }
 }
