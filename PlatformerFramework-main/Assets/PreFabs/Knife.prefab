@@ -141,6 +141,7 @@ MonoBehaviour:
   startDirection: down
   audioSource: {fileID: -6393119567743067330}
   knifeHitBoard: {fileID: 8300000, guid: a266fc687f0ec9d448a50bf43a2961af, type: 3}
+  Torti: {fileID: 0}
 --- !u!82 &-6393119567743067330
 AudioSource:
   m_ObjectHideFlags: 0

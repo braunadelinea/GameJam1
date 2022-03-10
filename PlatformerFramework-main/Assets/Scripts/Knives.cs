@@ -19,6 +19,8 @@ public class Knives : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip knifeHitBoard;
 
+    public GameObject Torti;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,7 @@ public class Knives : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        audioSource.volume = 1 / (0.2f * Vector2.Distance(gameObject.transform.position, Torti.transform.position));
         // move down
         if (transform.position.y > 4 && movingDown == false)
         {
