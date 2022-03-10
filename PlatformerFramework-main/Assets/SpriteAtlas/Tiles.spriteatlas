@@ -44,12 +44,13 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 015970736cfa36e4c88054972bb3d2ba, type: 3}
-    totalSpriteSurfaceArea: 23008114
+    totalSpriteSurfaceArea: 30086002
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 197054613fc237949b0bd41393089922, type: 3}
   - {fileID: 5390291880678140523, guid: d1207ac18491a65468f8e093df0436e0, type: 3}
   - {fileID: -4925957519692718827, guid: d1207ac18491a65468f8e093df0436e0, type: 3}
   - {fileID: 4680785175772899533, guid: d1207ac18491a65468f8e093df0436e0, type: 3}
@@ -71,6 +72,7 @@ SpriteAtlas:
   - {fileID: 8631158487034973356, guid: e63dcdf3c4569d74daf05ab11219683e, type: 3}
   - {fileID: 8248361016977204851, guid: e63dcdf3c4569d74daf05ab11219683e, type: 3}
   - {fileID: 21300000, guid: 4963b524e146bd94e886766d166f1f4f, type: 3}
+  - {fileID: 21300000, guid: f7153445d9a43824fa8ca9bbcdcfff30, type: 3}
   - {fileID: 21300000, guid: 103f58d6fae24324c8dada41b6640180, type: 3}
   - {fileID: 4413142109597815103, guid: 29173af6ad4f8f34cae2f2ad028ec303, type: 3}
   - {fileID: -3674992999376901249, guid: 29173af6ad4f8f34cae2f2ad028ec303, type: 3}
@@ -85,6 +87,7 @@ SpriteAtlas:
   - {fileID: -3347984106645726015, guid: 9e5bac4777e59db4c80a998172c53472, type: 3}
   - {fileID: -6386380331874166012, guid: 9e5bac4777e59db4c80a998172c53472, type: 3}
   - {fileID: 4055577607036525942, guid: 9e5bac4777e59db4c80a998172c53472, type: 3}
+  - {fileID: 21300000, guid: 34e725986d82d524ebf506f1b244b7af, type: 3}
   - {fileID: 7562716900497062, guid: f99a3879764308a4d92d87d841829522, type: 3}
   - {fileID: -7154765599751142846, guid: f99a3879764308a4d92d87d841829522, type: 3}
   - {fileID: 2984065513281883999, guid: f99a3879764308a4d92d87d841829522, type: 3}
@@ -306,6 +309,7 @@ SpriteAtlas:
   - {fileID: 6731733094262721628, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
   - {fileID: 21300000, guid: a8ceb1cd817a6ce41ad229ca4c791dd3, type: 3}
   m_PackedSpriteNamesToIndex:
+  - final fork (longer hand)-1.png
   - sauce from pack_2
   - sauce from pack_3
   - sauce from pack_0
@@ -327,6 +331,7 @@ SpriteAtlas:
   - torti new rolling_1
   - torti new rolling_0
   - final hand with fork-1.png-1.png
+  - counter (top).png
   - start of cutting board
   - FlyingSlimeAttack_8
   - FlyingSlimeAttack_7
@@ -341,6 +346,7 @@ SpriteAtlas:
   - FlyingSlimeIdle_0
   - FlyingSlimeIdle_3
   - FlyingSlimeIdle_2
+  - counter (bottom) .png
   - cavesofgallet_tiles_0
   - cavesofgallet_tiles_1
   - cavesofgallet_tiles_2

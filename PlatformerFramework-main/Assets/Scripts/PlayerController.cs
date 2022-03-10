@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jetpackFuelRecoveryRate = 0.5f;
 
     private float jetpackFuel = 0.0f;
-    private bool canUseJetpack = true;
+    private bool canUseJetpack = false;
 
     // jetpack cooldown bar things
     public GameObject jetpackFuelBar;
@@ -170,15 +170,10 @@ public class PlayerController : MonoBehaviour
 
             jetpackOn = false;
 
-            if (jetpackFuel < jetpackMaxFuel / 5)
+            if (jetpackFuel < 0.5)
             {
                 canUseJetpack = false;
                 //change color ?? maybe
-            }
-
-            if (jetpackFuel > jetpackMaxFuel / 5)
-            {
-                canUseJetpack = true;
             }
 
             if (jetpackFuel < jetpackMaxFuel)
