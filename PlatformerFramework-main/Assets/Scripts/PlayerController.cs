@@ -76,11 +76,12 @@ public class PlayerController : MonoBehaviour
     public AudioClip tortiCollision;
     public AudioClip jumpNoise;
     public AudioClip tortiStabbed;
-
+    public AudioClip mammaMiaVoice;
     public AudioSource jetpackAudioSource;
     public AudioClip jetpackNoise;
 
     private bool deathSoundPlayed = false;
+    private bool mammaMiaPlayed = false;
 
     [SerializeField] private Animator mamaMiaAnim;
     
@@ -308,7 +309,11 @@ public class PlayerController : MonoBehaviour
             }
             
             mamaMiaAnim.SetBool("Dead", true);
-            // mamma mia
+            if (!mammaMiaPlayed)
+            {
+                myAud.PlayOneShot(mammaMiaVoice, 3.0f);
+                mammaMiaPlayed = true;
+            }
             myAnim.SetBool("Dead", true);
         }
         else if (collision.gameObject.CompareTag("Jar"))
