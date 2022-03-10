@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource jetpackAudioSource;
     public AudioClip jetpackNoise;
 
-    public bool deathSoundPlayed = true;
+    private bool deathSoundPlayed = false;
 
     // Fork
     [SerializeField] private Fork fork;
@@ -291,8 +291,9 @@ public class PlayerController : MonoBehaviour
         {
             if (!deathSoundPlayed)
             {
+                print("death sound played");
                 myAud.PlayOneShot(tortiCollision);
-                deathSoundPlayed = false;
+                deathSoundPlayed = true;
             }
             myRb.velocity = Vector2.zero;
             transform.position = RespawnPoint;
