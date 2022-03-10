@@ -11,7 +11,12 @@ public class SauceJar : MonoBehaviour
 
     void FixedUpdate()
     {
-        float change = Mathf.Sin(Time.frameCount * speed) * stretch;
+        float change = Mathf.Sin(Time.frameCount * speed * Time.deltaTime * 10) * stretch;
         transform.position = new Vector3(transform.position.x, transform.position.y + change, 0);
+    }
+
+    public string getColor()
+    {
+        return sauceColor;
     }
 }
