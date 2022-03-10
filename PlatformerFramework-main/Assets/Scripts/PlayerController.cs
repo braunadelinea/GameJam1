@@ -304,7 +304,6 @@ public class PlayerController : MonoBehaviour
             {
                 fork.setTortiStabbed();
                 // torti is hit
-                myAud.PlayOneShot(tortiStabbed);
             }
             
             mamaMiaAnim.SetBool("Dead", true);

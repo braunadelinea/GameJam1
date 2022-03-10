@@ -12,10 +12,16 @@ public class Flames : MonoBehaviour
     [SerializeField] private GameObject mediumFlame;
     [SerializeField] private GameObject highFlame;
 
+    public AudioSource audioSource;
+    public AudioClip fireClip;
+
+    public GameObject Torti;
+
     // Start is called before the first frame update
     void Start()
     {
         myAnim = GetComponent<Animator>();
+        audioSource.clip = fireClip;
         
         StartCoroutine(ChangeStates());
     }
@@ -23,6 +29,7 @@ public class Flames : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        audioSource.volume = 1 / (0.2f * Vector2.Distance(gameObject.transform.position, Torti.transform.position));
         // Do stuff
         if (state == "invisible")
         {
@@ -55,22 +62,24 @@ public class Flames : MonoBehaviour
         // invisible -> low
         if (state == "invisible")
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.25f);
             state = "low";
             movingBack = false;
+            audioSource.Play();
         }
         else if (state == "low")
         {
             // low -> invisible
             if (movingBack)
             {
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(0.5f);
                 state = "invisible";
+                audioSource.Stop();
             }
             // low -> mid
             if (!movingBack)
             {
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(0.25f);
                 state = "mid";
             }
         }
@@ -79,20 +88,20 @@ public class Flames : MonoBehaviour
             // mid -> low
             if (movingBack)
             {
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(0.5f);
                 state = "low";
             }
             // mid -> high
             if (!movingBack)
             {
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(0.25f);
                 state = "high";
             }
         }
         // high -> mid
         else if (state == "high")
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.5f);
             state = "mid";
             movingBack = true;
         }
