@@ -53,9 +53,11 @@ public class PlayerController : MonoBehaviour
     private bool jetpackOn = false;
     [SerializeField] private float jetPackForce = 0.5f;
     [SerializeField] private float jetpackMaxFuel = 15.0f;
-    [SerializeField] private float jetpackFuelLossRate = 0.025f;
+    [SerializeField] private float jetpackFuelLossRate = 2.0f;
+    [SerializeField] private float jetpackFuelRecoveryRate = 0.5f;
+
     private float jetpackFuel = 0.0f;
-    private bool canUseJetpack = false;
+    private bool canUseJetpack = true;
 
     // jetpack cooldown bar things
     public GameObject jetpackFuelBar;
@@ -152,22 +154,36 @@ public class PlayerController : MonoBehaviour
         // jetpack things
         if (Input.GetAxisRaw("Jetpack") == 1 && jetpackFuel > 0 && canUseJetpack)
         {
+            if (!jetpackOn)
+            {
+                jetpackAudioSource.Play();
+            }
             jetpackOn = true;
-            jetpackAudioSource.PlayOneShot(jetpackNoise);
             jetpackFuel -= Time.deltaTime * jetpackFuelLossRate;
         }
         else
         {
+            if (jetpackOn)
+            {
+                jetpackAudioSource.Stop();
+            }
+
             jetpackOn = false;
 
-            if (jetpackFuel < 0.05)
+            if (jetpackFuel < jetpackMaxFuel / 5)
             {
                 canUseJetpack = false;
+                //change color ?? maybe
             }
-            
+
+            if (jetpackFuel > jetpackMaxFuel / 5)
+            {
+                canUseJetpack = true;
+            }
+
             if (jetpackFuel < jetpackMaxFuel)
             {
-                jetpackFuel += Time.deltaTime * jetpackFuelLossRate;
+                jetpackFuel += Time.deltaTime * jetpackFuelRecoveryRate;
             }
         }
         
