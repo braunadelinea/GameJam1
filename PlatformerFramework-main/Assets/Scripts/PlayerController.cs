@@ -82,6 +82,8 @@ public class PlayerController : MonoBehaviour
 
     private bool deathSoundPlayed = false;
 
+    [SerializeField] private Animator mamaMiaAnim;
+    
     // Fork
     [SerializeField] private Fork fork;
 
@@ -304,6 +306,8 @@ public class PlayerController : MonoBehaviour
                 // torti is hit
                 myAud.PlayOneShot(tortiStabbed);
             }
+            
+            mamaMiaAnim.SetBool("Dead", true);
         }
         else if (collision.gameObject.CompareTag("Jar"))
         {
