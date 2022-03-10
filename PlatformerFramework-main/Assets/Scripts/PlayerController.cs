@@ -308,6 +308,7 @@ public class PlayerController : MonoBehaviour
             }
             
             mamaMiaAnim.SetBool("Dead", true);
+            // mamma mia
             myAnim.SetBool("Dead", true);
         }
         else if (collision.gameObject.CompareTag("Jar"))
