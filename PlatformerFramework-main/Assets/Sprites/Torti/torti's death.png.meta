@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 22e8c6283b08ffa428cc9516adf9b69d
+guid: 8d05132030d068f47937d89d02c69b63
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5389571358794312502
-    second: super mega new roll_0
+      213: -2838348859441749620
+    second: torti's death_0
   - first:
-      213: 7099053295748080234
-    second: super mega new roll_1
+      213: -4665175767720447117
+    second: torti's death_1
   - first:
-      213: 3314625412958523078
-    second: super mega new roll_2
+      213: 3429781958455148681
+    second: torti's death_2
   - first:
-      213: -2796391656270731351
-    second: super mega new roll_3
+      213: -7810145486713947522
+    second: torti's death_3
+  - first:
+      213: 6883100319777248364
+    second: torti's death_4
+  - first:
+      213: 792998709100822052
+    second: torti's death_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: super mega new roll_0
+      name: torti's death_0
       rect:
         serializedVersion: 2
         x: 14
-        y: 91
-        width: 175
-        height: 175
+        y: 112
+        width: 217
+        height: 119
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,20 +135,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac4127387656435b0800000000000000
-      internalID: -5389571358794312502
+      spriteID: c81e65420c82c98d0800000000000000
+      internalID: -2838348859441749620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: super mega new roll_1
+      name: torti's death_1
       rect:
         serializedVersion: 2
-        x: 203
-        y: 91
-        width: 175
-        height: 175
+        x: 245
+        y: 112
+        width: 217
+        height: 119
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6261ae2c57e48260800000000000000
-      internalID: 7099053295748080234
+      spriteID: 373334e3b57f14fb0800000000000000
+      internalID: -4665175767720447117
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: super mega new roll_2
+      name: torti's death_2
       rect:
         serializedVersion: 2
-        x: 392
-        y: 91
-        width: 175
-        height: 175
+        x: 476
+        y: 112
+        width: 217
+        height: 119
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ce00ee504aeffd20800000000000000
-      internalID: 3314625412958523078
+      spriteID: 98043caf488099f20800000000000000
+      internalID: 3429781958455148681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: super mega new roll_3
+      name: torti's death_3
       rect:
         serializedVersion: 2
-        x: 581
-        y: 91
-        width: 175
-        height: 175
+        x: 707
+        y: 112
+        width: 217
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,8 +198,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a7ed13ca983139d0800000000000000
-      internalID: -2796391656270731351
+      spriteID: e7a7b4c4f0acc9390800000000000000
+      internalID: -7810145486713947522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torti's death_4
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 84
+        width: 217
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6453b9c54fa58f50800000000000000
+      internalID: 6883100319777248364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torti's death_5
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 49
+        width: 231
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e3c4bdf1c410b00800000000000000
+      internalID: 792998709100822052
       vertices: []
       indices: 
       edges: []

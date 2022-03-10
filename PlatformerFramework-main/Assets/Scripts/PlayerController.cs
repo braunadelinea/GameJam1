@@ -298,7 +298,8 @@ public class PlayerController : MonoBehaviour
                 deathSoundPlayed = true;
             }
             myRb.velocity = Vector2.zero;
-            transform.position = RespawnPoint;
+            // transform.position = RespawnPoint;
+            
             
             if (collision.gameObject.layer == LayerMask.NameToLayer("Fork"))
             {
@@ -307,6 +308,7 @@ public class PlayerController : MonoBehaviour
             }
             
             mamaMiaAnim.SetBool("Dead", true);
+            myAnim.SetBool("Dead", true);
         }
         else if (collision.gameObject.CompareTag("Jar"))
         {
@@ -318,8 +320,6 @@ public class PlayerController : MonoBehaviour
             {
                 sauceAnim.SetInteger("SauceColor", 1);
             }
-
-            
             
             jetpackEnabled = true;
             
