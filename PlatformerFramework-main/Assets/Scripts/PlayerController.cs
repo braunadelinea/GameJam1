@@ -100,7 +100,6 @@ public class PlayerController : MonoBehaviour
     //Update is called once per frame
     private void Update()
     {
-
         moveInputH = Input.GetAxisRaw("Horizontal");
         if (isGrounded == true)
         {
@@ -187,7 +186,7 @@ public class PlayerController : MonoBehaviour
     {
         //check for ground
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-
+        
         //set animators on ground
         myAnim.SetBool("OnGround", isGrounded);
 

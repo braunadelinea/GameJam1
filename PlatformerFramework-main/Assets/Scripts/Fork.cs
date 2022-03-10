@@ -27,7 +27,7 @@ public class Fork : MonoBehaviour
         // This sets up a timer to stab the player after they do not progress in the game for too long (forkChopTime)
         double currentTime = Math.Floor(Time.fixedTime);
 
-        if (!stabbedTorti)
+        if (!stabbedTorti || !movingUp)
         {
             if (torti.position.x > furthestX + 0.25 && !stabbed)
             {
