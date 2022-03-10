@@ -44,12 +44,13 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 015970736cfa36e4c88054972bb3d2ba, type: 3}
-    totalSpriteSurfaceArea: 30086002
+    totalSpriteSurfaceArea: 30186354
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 38db3e60293e5c04d8686e2cda58d303, type: 3}
   - {fileID: 21300000, guid: 197054613fc237949b0bd41393089922, type: 3}
   - {fileID: 5390291880678140523, guid: d1207ac18491a65468f8e093df0436e0, type: 3}
   - {fileID: -4925957519692718827, guid: d1207ac18491a65468f8e093df0436e0, type: 3}
@@ -308,7 +309,9 @@ SpriteAtlas:
   - {fileID: 1018328791618719094, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
   - {fileID: 6731733094262721628, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
   - {fileID: 21300000, guid: a8ceb1cd817a6ce41ad229ca4c791dd3, type: 3}
+  - {fileID: 21300000, guid: 4024208e61388d7438824b45bbc8e408, type: 3}
   m_PackedSpriteNamesToIndex:
+  - pesto
   - final fork (longer hand)-1.png
   - sauce from pack_2
   - sauce from pack_3
@@ -567,6 +570,7 @@ SpriteAtlas:
   - tileset_95
   - tileset_94
   - cutting board end-1.png
+  - marinara
   m_RenderDataMap: {}
   m_Tag: Tiles
   m_IsVariant: 0

@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
         UpdateFuelBar();
         
-        sauceAnim.SetInteger("SauceColor", 1);
+        sauceAnim.SetInteger("SauceColor", 0);
     }
 
     //Update is called once per frame
