@@ -31,11 +31,11 @@ public class Knives : MonoBehaviour
     {
 
         // move down
-        if (transform.position.y > 2 && movingDown == false)
+        if (transform.position.y > 4 && movingDown == false)
         {
             movingDown = true;
         }
-        if (transform.position.y < -2.52 && movingDown)
+        if (transform.position.y < -0.66 && movingDown)
         {
             audioSource.PlayOneShot(knifeHitBoard, 0.7F);
 
