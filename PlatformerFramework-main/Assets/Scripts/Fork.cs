@@ -40,8 +40,7 @@ public class Fork : MonoBehaviour
             if (currentTime - lastIncreaseTime > forkChopTime && !stabbed)
             {
                 stabbed = true;
-            
-                // TODO: Add stabbing here
+                
                 transform.position = new Vector3(torti.position.x + 5, 15, 0);
             }
 
