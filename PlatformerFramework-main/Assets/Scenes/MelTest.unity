@@ -140,6 +140,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 1561519976436691292, guid: 5bb8d5d8999585341b7eb975ef896e7e,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.056
+      objectReference: {fileID: 0}
     - target: {fileID: 8110227999438090080, guid: 5bb8d5d8999585341b7eb975ef896e7e,
         type: 3}
       propertyPath: fork
@@ -194,6 +199,11 @@ PrefabInstance:
         type: 3}
       propertyPath: jetpackFuelLossRate
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110227999438090080, guid: 5bb8d5d8999585341b7eb975ef896e7e,
+        type: 3}
+      propertyPath: jetpackFuelRecoveryRate
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8110227999438090081, guid: 5bb8d5d8999585341b7eb975ef896e7e,
         type: 3}
@@ -528,7 +538,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.028
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -737,11 +747,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 94f4c428796db944dbafd2776d56ab60, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.033
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
