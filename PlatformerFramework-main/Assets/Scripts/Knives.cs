@@ -16,7 +16,7 @@ public class Knives : MonoBehaviour
     private float currentTime = 0.0f;
     [SerializeField] String startDirection = "down";
 
-    AudioSource audioSource;
+    public AudioSource audioSource;
     public AudioClip knifeHitBoard;
 
     // Start is called before the first frame update
