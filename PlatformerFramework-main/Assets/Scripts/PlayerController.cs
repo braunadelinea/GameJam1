@@ -53,9 +53,12 @@ public class PlayerController : MonoBehaviour
     private bool jetpackOn = false;
     [SerializeField] private float jetPackForce = 0.5f;
     [SerializeField] private float jetpackMaxFuel = 15.0f;
-    [SerializeField] private float jetpackFuelLossRate = 0.025f;
+    [SerializeField] private float jetpackFuelLossRate = 2.0f;
+    [SerializeField] private float jetpackFuelRecoveryRate = 0.5f;
+
     private float jetpackFuel = 0.0f;
     private bool canUseJetpack = false;
+    private bool jetpackEnabled = false;
 
     // jetpack cooldown bar things
     public GameObject jetpackFuelBar;
@@ -77,9 +80,13 @@ public class PlayerController : MonoBehaviour
     public AudioSource jetpackAudioSource;
     public AudioClip jetpackNoise;
 
+    private bool deathSoundPlayed = false;
+
+    [SerializeField] private Animator mamaMiaAnim;
+    
     // Fork
     [SerializeField] private Fork fork;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -93,14 +100,11 @@ public class PlayerController : MonoBehaviour
         jetpackFuel = jetpackMaxFuel;
 
         UpdateFuelBar();
-        
-        sauceAnim.SetInteger("SauceColor", 1);
     }
 
     //Update is called once per frame
     private void Update()
     {
-
         moveInputH = Input.GetAxisRaw("Horizontal");
         if (isGrounded == true)
         {
@@ -151,24 +155,33 @@ public class PlayerController : MonoBehaviour
         }
 
         // jetpack things
-        if (Input.GetAxisRaw("Jetpack") == 1 && jetpackFuel > 0 && canUseJetpack)
+        if (Input.GetAxisRaw("Jetpack") == 1 && jetpackFuel > 0 && canUseJetpack && jetpackEnabled)
         {
+            if (!jetpackOn)
+            {
+                jetpackAudioSource.Play();
+            }
             jetpackOn = true;
-            jetpackAudioSource.PlayOneShot(jetpackNoise);
             jetpackFuel -= Time.deltaTime * jetpackFuelLossRate;
         }
         else
         {
+            if (jetpackOn)
+            {
+                jetpackAudioSource.Stop();
+            }
+
             jetpackOn = false;
 
-            if (jetpackFuel < 0.05)
+            if (jetpackFuel < 0.5)
             {
                 canUseJetpack = false;
+                //change color ?? maybe
             }
-            
+
             if (jetpackFuel < jetpackMaxFuel)
             {
-                jetpackFuel += Time.deltaTime * jetpackFuelLossRate;
+                jetpackFuel += Time.deltaTime * jetpackFuelRecoveryRate;
             }
         }
         
@@ -187,7 +200,7 @@ public class PlayerController : MonoBehaviour
     {
         //check for ground
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-
+        
         //set animators on ground
         myAnim.SetBool("OnGround", isGrounded);
 
@@ -278,17 +291,39 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            myAud.PlayOneShot(tortiCollision);
+            if (!deathSoundPlayed)
+            {
+                print("death sound played");
+                myAud.PlayOneShot(tortiCollision);
+                deathSoundPlayed = true;
+            }
             myRb.velocity = Vector2.zero;
-            transform.position = RespawnPoint;
+            // transform.position = RespawnPoint;
+            
             
             if (collision.gameObject.layer == LayerMask.NameToLayer("Fork"))
             {
-                print("Stabbed Torti :(");
                 fork.setTortiStabbed();
                 // torti is hit
-                myAud.PlayOneShot(tortiStabbed);
             }
+            
+            mamaMiaAnim.SetBool("Dead", true);
+            myAnim.SetBool("Dead", true);
+        }
+        else if (collision.gameObject.CompareTag("Jar"))
+        {
+            if (collision.gameObject.GetComponent<SauceJar>().getColor() == "red")
+            {
+                sauceAnim.SetInteger("SauceColor", 0);
+            }
+            else if (collision.gameObject.GetComponent<SauceJar>().getColor() == "green")
+            {
+                sauceAnim.SetInteger("SauceColor", 1);
+            }
+            
+            jetpackEnabled = true;
+            
+            Destroy(collision.gameObject);
         }
     }
 }

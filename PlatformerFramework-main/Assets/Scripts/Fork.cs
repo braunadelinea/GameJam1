@@ -17,6 +17,9 @@ public class Fork : MonoBehaviour
     [SerializeField] private Transform torti;
     private bool stabbedTorti = false;
     
+    // Shake
+    [SerializeField] private FollowingCamera camera;
+    
     void Start()
     {
         
@@ -27,7 +30,7 @@ public class Fork : MonoBehaviour
         // This sets up a timer to stab the player after they do not progress in the game for too long (forkChopTime)
         double currentTime = Math.Floor(Time.fixedTime);
 
-        if (!stabbedTorti)
+        if (!stabbedTorti || !movingUp)
         {
             if (torti.position.x > furthestX + 0.25 && !stabbed)
             {
@@ -40,8 +43,7 @@ public class Fork : MonoBehaviour
             if (currentTime - lastIncreaseTime > forkChopTime && !stabbed)
             {
                 stabbed = true;
-            
-                // TODO: Add stabbing here
+                
                 transform.position = new Vector3(torti.position.x + 5, 15, 0);
             }
 
@@ -66,8 +68,9 @@ public class Fork : MonoBehaviour
                 }
                 
 
-                if (transform.position.y <= 0.6)
+                if (transform.position.y <= 0.6 && !movingUp)
                 {
+                    camera.TriggerShake(0.25f, 0.5f);
                     movingUp = true;
                 }
             }
