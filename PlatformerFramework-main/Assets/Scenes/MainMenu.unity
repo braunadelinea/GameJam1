@@ -746,6 +746,11 @@ PrefabInstance:
       propertyPath: m_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7806682004418710100, guid: 54b01999deac29045ad5f8cb6a2b3a79,
+        type: 3}
+      propertyPath: LevelToLoad
+      value: Alex Testing
+      objectReference: {fileID: 0}
     - target: {fileID: 7806682004418710101, guid: 54b01999deac29045ad5f8cb6a2b3a79,
         type: 3}
       propertyPath: m_Pivot.x

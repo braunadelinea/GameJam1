@@ -44,7 +44,7 @@ public class Fork : MonoBehaviour
             {
                 stabbed = true;
                 
-                transform.position = new Vector3(torti.position.x + 5, 15, 0);
+                transform.position = new Vector3(torti.position.x - 3.6f, 15, 0);
             }
 
             if (!stabbed)
@@ -68,7 +68,7 @@ public class Fork : MonoBehaviour
                 }
                 
 
-                if (transform.position.y <= 0.6 && !movingUp)
+                if (transform.position.y <= -1 && !movingUp)
                 {
                     camera.TriggerShake(0.25f, 0.5f);
                     movingUp = true;
