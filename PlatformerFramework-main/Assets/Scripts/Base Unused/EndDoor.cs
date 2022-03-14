@@ -11,6 +11,9 @@ using UnityEngine.SceneManagement;
 public class EndDoor : MonoBehaviour
 {
     public string LevelToLoad = "EndScene";
+    public AudioSource audioSource;
+    public AudioClip winSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,7 @@ public class EndDoor : MonoBehaviour
     {
         if(collision.gameObject.GetComponent<PlayerController>() != null)
         {
+            audioSource.PlayOneShot(winSound); 
             SceneManager.LoadScene(LevelToLoad);
         }
     }
