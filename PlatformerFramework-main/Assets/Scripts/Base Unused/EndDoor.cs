@@ -14,6 +14,9 @@ public class EndDoor : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip winSound;
 
+    private bool gameWon = false;
+;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,12 +29,24 @@ public class EndDoor : MonoBehaviour
         
     }
 
+    public bool getGameWon()
+    {
+        return gameWon;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        gameWon = true;
         if(collision.gameObject.GetComponent<PlayerController>() != null)
         {
-            audioSource.PlayOneShot(winSound); 
+            audioSource.PlayOneShot(winSound);
+            StartCoroutine(WaitWinSound());
             SceneManager.LoadScene(LevelToLoad);
         }
+    }
+
+    IEnumerator WaitWinSound()
+    {
+        yield return new WaitForSeconds(6);
     }
 }

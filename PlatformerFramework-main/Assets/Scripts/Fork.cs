@@ -16,7 +16,8 @@ public class Fork : MonoBehaviour
     
     [SerializeField] private Transform torti;
     private bool stabbedTorti = false;
-    
+    public EndDoor endDoor;
+
     // Shake
     [SerializeField] private FollowingCamera camera;
     
@@ -27,6 +28,10 @@ public class Fork : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(endDoor.getGameWon())
+        {
+            return;
+        }
         // This sets up a timer to stab the player after they do not progress in the game for too long (forkChopTime)
         double currentTime = Math.Floor(Time.fixedTime);
 
