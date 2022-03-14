@@ -3,6 +3,8 @@
  * Last Edited: 1/27/2021
  * Description: Add this to an object the player can collide with to go to a new level
  * *************************************/
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,7 +17,6 @@ public class EndDoor : MonoBehaviour
     public AudioClip winSound;
 
     private bool gameWon = false;
-;
 
     // Start is called before the first frame update
     void Start()
@@ -40,13 +41,10 @@ public class EndDoor : MonoBehaviour
         if(collision.gameObject.GetComponent<PlayerController>() != null)
         {
             audioSource.PlayOneShot(winSound);
-            StartCoroutine(WaitWinSound());
+            
+            System.Threading.Thread.Sleep(6000);
+            
             SceneManager.LoadScene(LevelToLoad);
         }
-    }
-
-    IEnumerator WaitWinSound()
-    {
-        yield return new WaitForSeconds(6);
     }
 }
