@@ -11,7 +11,7 @@ public class SauceJar : MonoBehaviour
 
     void FixedUpdate()
     {
-        float change = Mathf.Sin(Time.frameCount * speed * Time.deltaTime * 10) * stretch;
+        float change = Mathf.Sin(Time.frameCount * speed * Time.fixedDeltaTime * 10) * stretch;
         transform.position = new Vector3(transform.position.x, transform.position.y + change, 0);
     }
 

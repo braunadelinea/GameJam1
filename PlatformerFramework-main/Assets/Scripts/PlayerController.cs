@@ -7,6 +7,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -87,7 +88,11 @@ public class PlayerController : MonoBehaviour
     
     // Fork
     [SerializeField] private Fork fork;
-
+    
+    // Reset
+    [SerializeField] private string mainMenu = "MainMenu";
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -199,6 +204,11 @@ public class PlayerController : MonoBehaviour
     // FixedUpdate is called once per physics frame
     void FixedUpdate()
     {
+        if (transform.position.y < -50)
+        {
+            killPlayer();
+        }
+        
         //check for ground
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         
@@ -292,28 +302,13 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            if (!deathSoundPlayed)
-            {
-                myAud.PlayOneShot(tortiCollision);
-                deathSoundPlayed = true;
-            }
-            myRb.velocity = Vector2.zero;
-            // transform.position = RespawnPoint;
-            
+            killPlayer();
             
             if (collision.gameObject.layer == LayerMask.NameToLayer("Fork"))
             {
                 fork.setTortiStabbed();
                 // torti is hit
             }
-            
-            mamaMiaAnim.SetBool("Dead", true);
-            if (!mammaMiaPlayed)
-            {
-                myAud.PlayOneShot(mammaMiaVoice, 3.0f);
-                mammaMiaPlayed = true;
-            }
-            myAnim.SetBool("Dead", true);
         }
         else if (collision.gameObject.CompareTag("Jar"))
         {
@@ -330,5 +325,24 @@ public class PlayerController : MonoBehaviour
             
             Destroy(collision.gameObject);
         }
+    }
+
+    private void killPlayer()
+    {
+        if (!deathSoundPlayed)
+        {
+            myAud.PlayOneShot(tortiCollision);
+            deathSoundPlayed = true;
+        }
+        myRb.velocity = Vector2.zero;
+
+        mamaMiaAnim.SetBool("Dead", true);
+        if (!mammaMiaPlayed)
+        {
+            myAud.PlayOneShot(mammaMiaVoice, 3.0f);
+            mammaMiaPlayed = true;
+        }
+        myAnim.SetBool("Dead", true);
+        SceneManager.LoadScene(mainMenu);
     }
 }
