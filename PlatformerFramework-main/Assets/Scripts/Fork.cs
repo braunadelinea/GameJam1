@@ -68,7 +68,7 @@ public class Fork : MonoBehaviour
                 }
                 
 
-                if (transform.position.y <= -1 && !movingUp)
+                if (transform.position.y <= -1.1 && !movingUp)
                 {
                     camera.TriggerShake(0.25f, 0.5f);
                     movingUp = true;

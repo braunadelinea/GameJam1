@@ -294,7 +294,6 @@ public class PlayerController : MonoBehaviour
         {
             if (!deathSoundPlayed)
             {
-                print("death sound played");
                 myAud.PlayOneShot(tortiCollision);
                 deathSoundPlayed = true;
             }
