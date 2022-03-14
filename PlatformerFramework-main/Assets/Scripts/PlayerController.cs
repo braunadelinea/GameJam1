@@ -6,6 +6,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -343,6 +344,16 @@ public class PlayerController : MonoBehaviour
             mammaMiaPlayed = true;
         }
         myAnim.SetBool("Dead", true);
+        
+        goToMainMenu();
+        
+        var thread = new Thread(goToMainMenu);
+        thread.Start();
+    }
+
+    private void goToMainMenu()
+    {
+        System.Threading.Thread.Sleep(3000);
         SceneManager.LoadScene(mainMenu);
     }
 }
