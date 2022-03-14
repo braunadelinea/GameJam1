@@ -198,12 +198,12 @@ PrefabInstance:
     - target: {fileID: 6003898407064649035, guid: dcaf5adef4b4e084d90f52d09a500326,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6003898407064649035, guid: dcaf5adef4b4e084d90f52d09a500326,
         type: 3}
       propertyPath: m_SortingLayerID
-      value: -539547793
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6003898407064649076, guid: dcaf5adef4b4e084d90f52d09a500326,
         type: 3}
@@ -412,7 +412,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -18.628714, y: 0}
+  m_Offset: {x: -8.481668, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -423,7 +423,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 41.820087, y: 1}
+  m_Size: {x: 62.114178, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &324836253
 GameObject:
@@ -469,7 +469,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 38.544857, y: 0}
+  m_Offset: {x: 48.76185, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -480,7 +480,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 79.00771, y: 1}
+  m_Size: {x: 58.573734, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &424288590 stripped
 GameObject:
@@ -1882,6 +1882,11 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1559551232914398767, guid: b0fc957dcc88b0749ba8089ad315d2b7,
+        type: 3}
+      propertyPath: Torti
+      value: 
+      objectReference: {fileID: 1447759692}
     - target: {fileID: 1559551232914398767, guid: b0fc957dcc88b0749ba8089ad315d2b7,
         type: 3}
       propertyPath: knifeHitBoard
