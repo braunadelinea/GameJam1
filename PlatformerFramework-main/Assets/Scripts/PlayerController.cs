@@ -345,15 +345,12 @@ public class PlayerController : MonoBehaviour
         }
         myAnim.SetBool("Dead", true);
         
-        goToMainMenu();
+        Invoke("goToMainMenu", 2);
         
-        var thread = new Thread(goToMainMenu);
-        thread.Start();
     }
 
     private void goToMainMenu()
     {
-        System.Threading.Thread.Sleep(3000);
         SceneManager.LoadScene(mainMenu);
     }
 }

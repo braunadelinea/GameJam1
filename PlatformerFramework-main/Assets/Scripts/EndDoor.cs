@@ -42,9 +42,12 @@ public class EndDoor : MonoBehaviour
         {
             audioSource.PlayOneShot(winSound);
             
-            System.Threading.Thread.Sleep(6000);
-            
-            SceneManager.LoadScene(LevelToLoad);
+            Invoke("goToMainMenu", 4);
         }
+    }
+
+    private void goToMainMenu()
+    {
+        SceneManager.LoadScene(LevelToLoad);
     }
 }

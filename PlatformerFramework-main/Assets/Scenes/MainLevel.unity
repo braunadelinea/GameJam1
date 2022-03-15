@@ -490,6 +490,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 370b9d6ad746cca45966dcb70c2147da, type: 3}
     - target: {fileID: 2056557339639402794, guid: 5bb8d5d8999585341b7eb975ef896e7e,
         type: 3}
+      propertyPath: mammaMiaVoice
+      value: 
+      objectReference: {fileID: 8300000, guid: 08ddf64966f7e9c4591f5ff6053844b1, type: 3}
+    - target: {fileID: 2056557339639402794, guid: 5bb8d5d8999585341b7eb975ef896e7e,
+        type: 3}
       propertyPath: jetpackFuelBar
       value: 
       objectReference: {fileID: 1003189532}
@@ -846,6 +851,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mama Mia
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389378600653020698, guid: 7c8ba6fc34e17ed468a952dba23d814e,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6389378600653020699, guid: 7c8ba6fc34e17ed468a952dba23d814e,
         type: 3}
@@ -2558,12 +2568,17 @@ PrefabInstance:
     - target: {fileID: 8278344900533049157, guid: c1df9023c2175824ca437b0b94bdf4e2,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278344900533049157, guid: c1df9023c2175824ca437b0b94bdf4e2,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8278344900533049157, guid: c1df9023c2175824ca437b0b94bdf4e2,
         type: 3}
       propertyPath: m_SortingLayerID
-      value: -539547793
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8278344901085870682, guid: c1df9023c2175824ca437b0b94bdf4e2,
         type: 3}
@@ -2578,12 +2593,17 @@ PrefabInstance:
     - target: {fileID: 8278344901085870683, guid: c1df9023c2175824ca437b0b94bdf4e2,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278344901085870683, guid: c1df9023c2175824ca437b0b94bdf4e2,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8278344901085870683, guid: c1df9023c2175824ca437b0b94bdf4e2,
         type: 3}
       propertyPath: m_SortingLayerID
-      value: -539547793
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8278344901152386948, guid: c1df9023c2175824ca437b0b94bdf4e2,
         type: 3}
